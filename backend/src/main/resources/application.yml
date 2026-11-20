@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/taskflow}
+    username: ${DB_USERNAME:taskflow}
+    password: ${DB_PASSWORD:taskflow}
+  jpa:
+    hibernate.ddl-auto: none
+    open-in-view: false
+  flyway.enabled: true
+server.port: ${PORT:8080}
+management.endpoints.web.exposure.include: health
+app:
+  jwt:
+    secret: ${JWT_SECRET}            # required, >= 32 chars, never commit
+    access-minutes: 15
+  refresh-days: 14
+  cookie:
+    secure: ${COOKIE_SECURE:false}
+    same-site: ${COOKIE_SAMESITE:Lax}   # use None + secure=true for Vercel -> Render
+  cors.allowed-origins: ${CORS_ORIGINS:http://localhost:5173}

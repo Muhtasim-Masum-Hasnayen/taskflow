@@ -1,0 +1,5 @@
+spring:
+  datasource.url: jdbc:h2:mem:t;MODE=PostgreSQL
+  jpa.hibernate.ddl-auto: create-drop
+  flyway.enabled: false
+app.jwt.secret: test-secret-test-secret-test-secret-123

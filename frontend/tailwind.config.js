@@ -1,0 +1,2 @@
+export default { darkMode: "class", content: ["./index.html","./src/**/*.{ts,tsx}"],
+  theme: { extend: { colors: { brand: { DEFAULT: "#6366f1", dark: "#4f46e5" }, sidebar: "#0f172a" } } }, plugins: [] };
